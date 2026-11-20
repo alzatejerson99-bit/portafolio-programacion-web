@@ -110,7 +110,8 @@ section {
     padding: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    gap: 20px;
+    align-items: start;
 }
 
 #servicios li {
@@ -332,5 +333,72 @@ footer {
     #nosotros,
     #contacto {
         padding: 30px 25px;
+    }
+}
+
+
+/* ANIMACIÓN DE CÓMO FUNCIONA */
+
+#como-funciona .paso {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+#como-funciona .paso:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* MODERNIZACIÓN DE SERVICIOS */
+
+#servicios .descripcion-servicios {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+#servicios li {
+    border: 1px solid #e5e5e5;
+    border-top: 3px solid #222;
+}
+
+#servicios li > .tag {
+    margin-bottom: 20px;
+}
+
+#servicios .flecha {
+    margin-left: auto;
+    transition: transform 0.3s ease;
+}
+
+#servicios .flecha i {
+    font-size: 16px;
+    width: auto;
+}
+
+#servicios details[open] .flecha {
+    transform: rotate(180deg);
+}
+
+#servicios .detalle-servicio {
+    padding: 18px;
+    border-radius: 10px;
+}
+
+#servicios details[open] .detalle-servicio {
+    animation: aparecerServicio 0.4s ease;
+}
+
+@keyframes aparecerServicio {
+
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

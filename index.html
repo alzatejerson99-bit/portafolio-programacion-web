@@ -6,17 +6,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privelux Business</title>
+
+    <!-- Framework Bulma CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+
+    <!-- Estilos personalizados -->
     <link rel="stylesheet" href="estilos.css">
+
+    <!-- Iconos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
 
+    <!-- BARRA SUPERIOR -->
+
     <header>
         <nav class="menu">
             <a href="#inicio">Inicio</a>
             <a href="#servicios">Servicios</a>
-            <a href="#como-funciona">Cómo funciona</a>
+            <a href="#como-funciona">Beneficios</a>
 
             <h1>Privelux Business</h1>
 
@@ -24,6 +33,7 @@
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
+
 
     <main>
 
@@ -39,6 +49,20 @@
                     que necesitan organizar y administrar la información de sus clientes
                     de una manera fácil y rápida.
                 </p>
+
+                <!-- Botones de Bulma -->
+
+                <div class="buttons mt-5">
+
+                    <a href="#servicios" id="ver-servicios" class="button is-light is-medium">
+                        Ver servicios
+                    </a>
+
+                    <a href="#como-funciona" class="button is-white is-outlined is-medium">
+                        Ver beneficios
+                    </a>
+
+                </div>
             </div>
 
             <img src="img/DashboardClientes.png" alt="Panel de administración de clientes">
@@ -49,125 +73,205 @@
         <!-- SERVICIOS -->
 
         <section id="servicios">
-            <h2>¿Qué podrás hacer con Privelux Business?</h2>
+
+            <div class="has-text-centered">
+
+                <span class="tag is-dark is-medium is-rounded">
+                    FUNCIONALIDADES
+                </span>
+
+                <h2>Todo lo que necesitas para administrar tus clientes</h2>
+
+                <p class="descripcion-servicios">
+                    Descubre las herramientas de Privelux Business.
+                    Haz clic en cada tarjeta para conocer sus funciones.
+                </p>
+
+            </div>
 
             <ul>
+
                 <li>
+                    <span class="tag is-dark is-rounded">01 · REGISTRO</span>
+
                     <details>
                         <summary>
                             <i class="bi bi-person-plus"></i>
                             Registrar nuevos clientes
+
+                            <span class="flecha">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
                         </summary>
-                        <p>
-                            Agrega nuevos clientes al sistema y guarda sus datos
-                            para tener su información disponible cuando la necesites.
+
+                        <p class="notification is-light detalle-servicio">
+                            Guarda los datos de nuevos clientes de forma sencilla
+                            y mantén sus registros disponibles para futuras consultas.
                         </p>
                     </details>
                 </li>
 
+
                 <li>
+                    <span class="tag is-dark is-rounded">02 · CONSULTA</span>
+
                     <details>
                         <summary>
                             <i class="bi bi-search"></i>
-                            Consultar la información de tus clientes
+                            Consultar información
+
+                            <span class="flecha">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
                         </summary>
-                        <p>
-                            Busca y revisa los datos de los clientes que ya
-                            están registrados en la plataforma.
+
+                        <p class="notification is-light detalle-servicio">
+                            Encuentra rápidamente los registros existentes
+                            y consulta la información de cada cliente.
                         </p>
                     </details>
                 </li>
 
+
                 <li>
+                    <span class="tag is-dark is-rounded">03 · EDICIÓN</span>
+
                     <details>
                         <summary>
                             <i class="bi bi-pencil-square"></i>
-                            Actualizar sus datos
+                            Actualizar datos
+
+                            <span class="flecha">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
                         </summary>
-                        <p>
-                            Modifica la información de un cliente cuando
-                            necesites corregir o actualizar algún dato.
+
+                        <p class="notification is-light detalle-servicio">
+                            Corrige o actualiza los datos de tus clientes
+                            para mantener la información al día.
                         </p>
                     </details>
                 </li>
 
+
                 <li>
+                    <span class="tag is-dark is-rounded">04 · ELIMINACIÓN</span>
+
                     <details>
                         <summary>
                             <i class="bi bi-trash"></i>
                             Eliminar clientes
+
+                            <span class="flecha">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
                         </summary>
-                        <p>
-                            Elimina los registros que ya no necesites
-                            mantener dentro de la plataforma.
+
+                        <p class="notification is-light detalle-servicio">
+                            Administra tus registros y elimina la información
+                            que ya no necesitas conservar.
                         </p>
                     </details>
                 </li>
 
+
                 <li>
+                    <span class="tag is-dark is-rounded">05 · ORGANIZACIÓN</span>
+
                     <details>
                         <summary>
                             <i class="bi bi-folder2-open"></i>
-                            Mantener organizada la información de tu negocio
+                            Organizar información
+
+                            <span class="flecha">
+                                <i class="bi bi-chevron-down"></i>
+                            </span>
                         </summary>
-                        <p>
-                            Centraliza los registros de tus clientes para
-                            facilitar su consulta y administración.
+
+                        <p class="notification is-light detalle-servicio">
+                            Centraliza la información de tu negocio
+                            y evita tener los datos dispersos en diferentes lugares.
                         </p>
                     </details>
                 </li>
+
             </ul>
+
         </section>
 
 
-        <!-- CÓMO FUNCIONA -->
+        <!-- BENEFICIOS -->
 
         <section id="como-funciona">
-            <h2>¿Cómo funciona Privelux Business?</h2>
+
+            <h2>¿Por qué elegir Privelux Business?</h2>
 
             <p class="descripcion-pasos">
-                Administra la información de tus clientes en tres pasos sencillos.
+                Una solución sencilla para mejorar la organización
+                y administración de los clientes de tu negocio.
             </p>
 
-            <div class="contenedor-pasos">
+            <div class="contenedor-pasos columns is-variable is-5">
 
-                <div class="paso">
+                <div class="paso column box">
+
                     <span class="numero-paso">01</span>
-                    <i class="bi bi-person-plus"></i>
-                    <h3>Registra</h3>
+
+                    <i class="bi bi-journal-text"></i>
+
+                    <h3>Menos trabajo manual</h3>
+
                     <p>
-                        Ingresa la información de tus clientes
-                        para guardarla en la plataforma.
+                        Evita depender únicamente de registros
+                        escritos y simplifica la administración
+                        de la información.
                     </p>
+
                 </div>
 
-                <div class="paso">
+
+                <div class="paso column box">
+
                     <span class="numero-paso">02</span>
-                    <i class="bi bi-pencil-square"></i>
-                    <h3>Administra</h3>
+
+                    <i class="bi bi-search"></i>
+
+                    <h3>Información accesible</h3>
+
                     <p>
-                        Consulta y actualiza los datos
-                        cuando sea necesario.
+                        Encuentra fácilmente los datos que necesitas
+                        y consulta la información de tus clientes
+                        desde un solo lugar.
                     </p>
+
                 </div>
 
-                <div class="paso">
+
+                <div class="paso column box">
+
                     <span class="numero-paso">03</span>
-                    <i class="bi bi-folder2-open"></i>
-                    <h3>Organiza</h3>
+
+                    <i class="bi bi-check-circle"></i>
+
+                    <h3>Mayor control</h3>
+
                     <p>
-                        Mantén la información de tu negocio
-                        ordenada y en un solo lugar.
+                        Mantén actualizados los registros
+                        de tus clientes y lleva una mejor
+                        organización de tu negocio.
                     </p>
+
                 </div>
 
             </div>
+
         </section>
 
 
         <!-- NOSOTROS -->
 
         <section id="nosotros">
+
             <h2>Sobre Privelux Business</h2>
 
             <p>
@@ -179,12 +283,14 @@
                 Privelux Business busca facilitar tareas que muchas veces se realizan
                 manualmente, permitiendo tener la información organizada en un solo lugar.
             </p>
+
         </section>
 
 
         <!-- CONTACTO -->
 
         <section id="contacto">
+
             <h2>Contáctanos</h2>
 
             <p>
@@ -192,6 +298,7 @@
             </p>
 
             <form>
+
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre">
 
@@ -199,15 +306,36 @@
                 <input type="tel" id="telefono">
 
                 <button type="submit">Enviar</button>
+
             </form>
+
         </section>
 
     </main>
 
 
+    <!-- PIE DE PÁGINA -->
+
     <footer>
         <p>Privelux Business - 2026</p>
     </footer>
+
+
+    <!-- DESPLEGAR LOS SERVICIOS -->
+
+    <script>
+        const botonServicios = document.getElementById("ver-servicios");
+
+        botonServicios.addEventListener("click", function () {
+
+            const tarjetas = document.querySelectorAll("#servicios details");
+
+            tarjetas.forEach(function (tarjeta) {
+                tarjeta.open = true;
+            });
+
+        });
+    </script>
 
 </body>
 
