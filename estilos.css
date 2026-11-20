@@ -1,3 +1,4 @@
+
 /* CONFIGURACIÓN GENERAL */
 
 * {
@@ -30,12 +31,14 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 15px;
 }
 
 .menu h1 {
     margin: 0;
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
 }
 
 .menu a {
@@ -72,7 +75,7 @@ section {
     border-radius: 18px;
     display: flex;
     align-items: center;
-    
+    gap: 30px;
 }
 
 #inicio h2 {
@@ -87,8 +90,10 @@ section {
     line-height: 1.6;
     color: #d4d4d4;
 }
-#inicio img{
+
+#inicio img {
     width: 200px;
+    max-width: 100%;
 }
 
 
@@ -104,25 +109,110 @@ section {
     list-style: none;
     padding: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(3, 1fr);
     gap: 14px;
 }
 
 #servicios li {
     background-color: white;
-    padding: 30px;
+    padding: 25px;
     border-radius: 14px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.20);
-    font-weight: bold;
+    transition: 0.3s;
 }
-#servicios li {
+
+#servicios li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+}
+
+#servicios details {
+    width: 100%;
+}
+
+#servicios summary {
     display: flex;
     align-items: center;
-    gap:15px;
+    gap: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
 }
-#servicios li i{
-  font-size: 30px;
-  width: 40px;
+
+#servicios summary::-webkit-details-marker {
+    display: none;
+}
+
+#servicios li i {
+    font-size: 30px;
+    width: 40px;
+    flex-shrink: 0;
+}
+
+#servicios details p {
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #555;
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+/* CÓMO FUNCIONA */
+
+#como-funciona {
+    text-align: center;
+}
+
+#como-funciona h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.descripcion-pasos {
+    color: #555;
+    font-size: 17px;
+    margin-bottom: 35px;
+}
+
+.contenedor-pasos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.paso {
+    background-color: white;
+    padding: 30px 20px;
+    border-radius: 14px;
+    border: 1px solid #e0e0e0;
+    position: relative;
+}
+
+.numero-paso {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.paso i {
+    display: block;
+    font-size: 38px;
+    color: #111;
+}
+
+.paso h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.paso p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555;
 }
 
 
@@ -132,7 +222,6 @@ section {
     background-color: white;
     padding: 50px;
     border-radius: 18px;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
 }
 
@@ -184,12 +273,14 @@ button {
     font-size: 16px;
     cursor: pointer;
 }
+
 button:hover {
     background-color: #333;
 }
 
 
 /* PIE DE PÁGINA */
+
 footer {
     background-color: #111;
     color: white;
@@ -198,3 +289,48 @@ footer {
 }
 
 
+/* ADAPTACIÓN A CELULARES */
+
+@media (max-width: 768px) {
+
+    .menu {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .menu h1 {
+        width: 100%;
+        order: -1;
+    }
+
+    .menu a {
+        font-size: 14px;
+    }
+
+    #inicio {
+        flex-direction: column;
+        padding: 40px 25px;
+        text-align: center;
+    }
+
+    #inicio h2 {
+        font-size: 32px;
+    }
+
+    #inicio img {
+        width: 180px;
+    }
+
+    #servicios ul {
+        grid-template-columns: 1fr;
+    }
+
+    .contenedor-pasos {
+        grid-template-columns: 1fr;
+    }
+
+    #nosotros,
+    #contacto {
+        padding: 30px 25px;
+    }
+}

@@ -1,7 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privelux Business</title>
     <link rel="stylesheet" href="estilos.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
@@ -10,46 +13,159 @@
 <body>
 
     <header>
-    <nav class="menu">
-        <a href="#inicio">Inicio</a>
-        <a href="#servicios">Servicios</a>
+        <nav class="menu">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicios">Servicios</a>
+            <a href="#como-funciona">Cómo funciona</a>
 
-        <h1>Privelux Business</h1>
+            <h1>Privelux Business</h1>
 
-        <a href="#nosotros">Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-    
+            <a href="#nosotros">Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
     <main>
 
-    <section id="inicio">
+        <!-- SECCIÓN DE INICIO -->
 
-    <div class="inicio-texto">
-        <h2>Organiza tus clientes de forma sencilla</h2>
+        <section id="inicio">
 
-        <p>
-            Privelux Business es una plataforma pensada para pequeños negocios
-            que necesitan organizar y administrar la información de sus clientes
-            de una manera fácil y rápida.
-        </p>
-    </div>
+            <div class="inicio-texto">
+                <h2>Organiza tus clientes de forma sencilla</h2>
 
-    <img src="img/DashboardClientes.png" alt="Panel de administración de clientes">
+                <p>
+                    Privelux Business es una plataforma pensada para pequeños negocios
+                    que necesitan organizar y administrar la información de sus clientes
+                    de una manera fácil y rápida.
+                </p>
+            </div>
 
-</section>
+            <img src="img/DashboardClientes.png" alt="Panel de administración de clientes">
+
+        </section>
+
+
+        <!-- SERVICIOS -->
+
         <section id="servicios">
             <h2>¿Qué podrás hacer con Privelux Business?</h2>
 
             <ul>
-                 <li><i class="bi bi-person-plus"></i> Registrar nuevos clientes</li>
-                 <li><i class="bi bi-search"></i> Consultar la información de tus clientes</li>
-                 <li><i class="bi bi-pencil-square"></i> Actualizar sus datos</li>
-                 <li><i class="bi bi-trash"></i> Eliminar clientes</li>
-                 <li><i class="bi bi-folder2-open"></i> Mantener organizada la información de tu negocio</li>
+                <li>
+                    <details>
+                        <summary>
+                            <i class="bi bi-person-plus"></i>
+                            Registrar nuevos clientes
+                        </summary>
+                        <p>
+                            Agrega nuevos clientes al sistema y guarda sus datos
+                            para tener su información disponible cuando la necesites.
+                        </p>
+                    </details>
+                </li>
+
+                <li>
+                    <details>
+                        <summary>
+                            <i class="bi bi-search"></i>
+                            Consultar la información de tus clientes
+                        </summary>
+                        <p>
+                            Busca y revisa los datos de los clientes que ya
+                            están registrados en la plataforma.
+                        </p>
+                    </details>
+                </li>
+
+                <li>
+                    <details>
+                        <summary>
+                            <i class="bi bi-pencil-square"></i>
+                            Actualizar sus datos
+                        </summary>
+                        <p>
+                            Modifica la información de un cliente cuando
+                            necesites corregir o actualizar algún dato.
+                        </p>
+                    </details>
+                </li>
+
+                <li>
+                    <details>
+                        <summary>
+                            <i class="bi bi-trash"></i>
+                            Eliminar clientes
+                        </summary>
+                        <p>
+                            Elimina los registros que ya no necesites
+                            mantener dentro de la plataforma.
+                        </p>
+                    </details>
+                </li>
+
+                <li>
+                    <details>
+                        <summary>
+                            <i class="bi bi-folder2-open"></i>
+                            Mantener organizada la información de tu negocio
+                        </summary>
+                        <p>
+                            Centraliza los registros de tus clientes para
+                            facilitar su consulta y administración.
+                        </p>
+                    </details>
+                </li>
             </ul>
         </section>
 
+
+        <!-- CÓMO FUNCIONA -->
+
+        <section id="como-funciona">
+            <h2>¿Cómo funciona Privelux Business?</h2>
+
+            <p class="descripcion-pasos">
+                Administra la información de tus clientes en tres pasos sencillos.
+            </p>
+
+            <div class="contenedor-pasos">
+
+                <div class="paso">
+                    <span class="numero-paso">01</span>
+                    <i class="bi bi-person-plus"></i>
+                    <h3>Registra</h3>
+                    <p>
+                        Ingresa la información de tus clientes
+                        para guardarla en la plataforma.
+                    </p>
+                </div>
+
+                <div class="paso">
+                    <span class="numero-paso">02</span>
+                    <i class="bi bi-pencil-square"></i>
+                    <h3>Administra</h3>
+                    <p>
+                        Consulta y actualiza los datos
+                        cuando sea necesario.
+                    </p>
+                </div>
+
+                <div class="paso">
+                    <span class="numero-paso">03</span>
+                    <i class="bi bi-folder2-open"></i>
+                    <h3>Organiza</h3>
+                    <p>
+                        Mantén la información de tu negocio
+                        ordenada y en un solo lugar.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- NOSOTROS -->
 
         <section id="nosotros">
             <h2>Sobre Privelux Business</h2>
@@ -66,6 +182,8 @@
         </section>
 
 
+        <!-- CONTACTO -->
+
         <section id="contacto">
             <h2>Contáctanos</h2>
 
@@ -74,7 +192,6 @@
             </p>
 
             <form>
-
                 <label for="nombre">Nombre:</label>
                 <input type="text" id="nombre">
 
@@ -82,7 +199,6 @@
                 <input type="tel" id="telefono">
 
                 <button type="submit">Enviar</button>
-
             </form>
         </section>
 
