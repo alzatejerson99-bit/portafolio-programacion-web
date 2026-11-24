@@ -1,5 +1,22 @@
-/* Colores del portafolio */
+/* Personalización de Bulma: colores y tipografía */
 :root {
+    /* Verde azulado (#0b6a60) como color principal */
+    --bulma-primary-h: 174deg;
+    --bulma-primary-s: 81%;
+    --bulma-primary-l: 23%;
+    --bulma-primary-invert-l: 100%;
+    --bulma-primary-on-scheme-l: 23%;
+
+    /* Azul oscuro (#102637) para menú, etiquetas y pie */
+    --bulma-dark-h: 206deg;
+    --bulma-dark-s: 55%;
+    --bulma-dark-l: 14%;
+
+    --bulma-family-primary: "Poppins", system-ui, sans-serif;
+    --bulma-radius: .5rem;
+    --bulma-radius-large: .75rem;
+
+    /* Colores propios */
     --fondo-oscuro: #102637;
     --acento: #0b6a60;
     --texto: #182f40;
@@ -10,6 +27,13 @@ body {
     background: #f3f7f8;
     color: var(--texto);
     line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.marca {
+    font-family: var(--bulma-family-primary);
 }
 
 html {
@@ -25,11 +49,8 @@ html {
 .descripcion {
     color: var(--texto-secundario);
 }
-/* Barra de navegación */
-.barra {
-    background-color: var(--fondo-oscuro);
-}
 
+/* Barra de navegación */
 .barra .marca {
     font-size: 1.35rem;
     font-weight: 750;
@@ -129,13 +150,23 @@ details[open] .flecha {
     box-shadow: none;
 }
 
+.lista-nosotros {
+    display: grid;
+    gap: 1rem;
+    padding: 1.25rem;
+    border-radius: .75rem;
+    background: #edf5f5;
+}
+
+.lista-nosotros li {
+    font-weight: 500;
+}
+
 .formulario {
     max-width: 28rem;
 }
 
 /* Pie de página */
-.pie {
-    background: var(--fondo-oscuro);
-    color: white;
+.footer {
     padding: 2rem 1.25rem;
 }
