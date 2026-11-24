@@ -1,4 +1,4 @@
-/* Colores y tipografía del portafolio */
+/* Colores del portafolio */
 :root {
     --fondo-oscuro: #102637;
     --acento: #0b6a60;
@@ -9,8 +9,12 @@
 body {
     background: #f3f7f8;
     color: var(--texto);
-    font-family: system-ui, sans-serif;
     line-height: 1.6;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
 }
 
 :focus-visible {
@@ -18,158 +22,72 @@ body {
     outline-offset: 3px;
 }
 
-/* Barra superior */
-header,
-footer {
-    background: var(--fondo-oscuro);
-    color: white;
+.descripcion {
+    color: var(--texto-secundario);
+}
+/* Barra de navegación */
+.barra {
+    background-color: var(--fondo-oscuro);
 }
 
-.menu {
-    max-width: 1100px;
-    margin: auto;
-    padding: 1rem 1.25rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: .75rem 1.5rem;
-}
-
-.menu a {
-    color: white;
-}
-
-.menu .marca {
-    font-size: clamp(1.25rem, 3vw, 1.6rem);
+.barra .marca {
+    font-size: 1.35rem;
     font-weight: 750;
     letter-spacing: -0.025em;
-    line-height: 1.2;
 }
 
-.menu-enlaces {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: .5rem 1rem;
-}
-
-.menu-enlaces a {
-    font-size: .95rem;
-}
-
-.menu-enlaces a:hover {
-    text-decoration: underline;
-}
-
-.menu .button {
-    color: var(--fondo-oscuro);
-}
-
-/* Distribución principal */
-main {
-    max-width: 1100px;
-    margin: auto;
-    padding: 2rem 1.25rem 3rem;
-}
-
-section + section {
-    margin-top: clamp(2rem, 5vw, 4rem);
-}
-
-h1,
-h2,
-h3 {
-    font-weight: 700;
-    line-height: 1.2;
-}
-
-h2 {
-    font-size: clamp(1.6rem, 4vw, 2rem);
-    margin-bottom: .75rem;
-}
-
-#inicio {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    padding: clamp(1.25rem, 5vw, 3rem);
-    border-radius: 1.25rem;
-    background: linear-gradient(135deg, var(--fondo-oscuro), #164b52);
+.barra .navbar-burger {
     color: white;
 }
 
-#inicio .title {
-    --bulma-title-size: clamp(2rem, 5vw, 3.25rem);
-    --bulma-title-weight: 750;
-    --bulma-title-line-height: 1.1;
+/* Inicio */
+.inicio {
+    background: linear-gradient(135deg, var(--fondo-oscuro), #164b52);
+}
+
+.inicio .title {
     letter-spacing: -0.03em;
     text-wrap: balance;
-    margin-bottom: 1rem;
 }
 
-#inicio p {
-    color: #e2eef1;
+.inicio .subtitle {
+    opacity: .9;
+    line-height: 1.6;
 }
 
-#inicio img {
-    width: 40%;
-    height: auto;
+.captura img {
     border-radius: .75rem;
+    box-shadow: 0 1.25rem 2.5rem rgba(0, 0, 0, .3);
 }
 
-/* Servicios desplegables */
-#servicios h2 {
-    margin-top: .75rem;
-}
-
-.descripcion-servicios,
-.descripcion-pasos {
-    color: var(--texto-secundario);
-    margin-bottom: 1.5rem;
-}
-
-.servicios-lista {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1rem;
-    align-items: start;
-}
-
-.servicios-lista li,
-.paso {
-    background: white;
-    color: var(--texto);
-    border: 1px solid #d8e4e7;
-}
-
-.servicios-lista li {
-    padding: 1rem;
-    border-radius: .75rem;
+/* Tarjetas de servicios */
+.servicio {
+    height: 100%;
     border-top: 3px solid var(--acento);
 }
 
-.servicios-lista summary {
+.servicio summary {
     display: flex;
     align-items: center;
     gap: .6rem;
-    margin-top: .65rem;
+    margin-top: .75rem;
     font-weight: 700;
     cursor: pointer;
     list-style: none;
 }
 
-.servicios-lista summary::-webkit-details-marker {
+.servicio summary::-webkit-details-marker {
     display: none;
 }
 
-.servicios-lista summary > i {
+.servicio summary > i {
     color: var(--acento);
     font-size: 1.25rem;
 }
 
 .flecha {
     margin-left: auto;
+    transition: transform .2s;
 }
 
 details[open] .flecha {
@@ -184,69 +102,40 @@ details[open] .flecha {
     font-size: .95rem;
 }
 
-/* Beneficios, nosotros y contacto */
-#como-funciona {
-    text-align: center;
+/* Beneficios */
+.beneficios {
+    background: white;
 }
 
 .paso {
     height: 100%;
+    border: 1px solid #d8e4e7;
+    box-shadow: none;
 }
 
-.paso i {
+.paso .icon {
     color: var(--acento);
     font-size: 1.75rem;
-}
-
-.paso h3 {
-    font-size: 1.15rem;
-    margin: .4rem 0 .6rem;
 }
 
 .paso p {
     color: var(--texto-secundario);
 }
 
-#nosotros,
-#contacto {
+/* Nosotros y contacto */
+.bloque {
     padding: clamp(1.25rem, 5vw, 2.5rem);
-    border-radius: 1rem;
-    background: white;
     border: 1px solid #d8e4e7;
+    box-shadow: none;
 }
 
-#nosotros p + p {
-    margin-top: .75rem;
-}
-
-#contacto form {
+.formulario {
     max-width: 28rem;
-    margin-top: 1rem;
 }
 
-footer {
-    padding: 1.25rem;
-    text-align: center;
-}
-
-@media (max-width: 850px) {
-    .servicios-lista {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 600px) {
-    #inicio {
-        flex-direction: column;
-        align-items: stretch;
-        gap: 1rem;
-    }
-
-    #inicio img {
-        width: 100%;
-    }
-
-    .servicios-lista {
-        grid-template-columns: 1fr;
-    }
+/* Pie de página */
+.pie {
+    background: var(--fondo-oscuro);
+    color: white;
+    padding: 2rem 1.25rem;
 }
